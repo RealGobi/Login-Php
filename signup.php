@@ -16,9 +16,10 @@ require 'header.php'; ?>
             }
        
         }
-        else if($_GET['signup'] == 'success'){
+        else if(isset($_GET['signup']) == 'success'){
             echo '<p style="color:green">Registrering klar, testa logga in uppe i högra hörnet.</p>';
-        }
+        } 
+        
         
         
 
