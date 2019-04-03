@@ -20,7 +20,7 @@
             <label>Email:</label>
             <input type="email" name="email" placeholder="Email...">
             <label>Lösenord:</label>
-            <input type="password" name="password" placeholder="Lösenord...">
+            <input type="password" name="password" minlength="5"  placeholder="Lösenord...">
             <button type="submit">Logga in!</button>
     </form>
         <span>
