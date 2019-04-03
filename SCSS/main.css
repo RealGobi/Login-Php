@@ -17,6 +17,13 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50%;
+  background: rgba(241, 119, 119, 0.233);
+  text-align: center;
 }
 
 body main form {

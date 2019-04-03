@@ -1,4 +1,6 @@
-<?php define('TITEL', 'Login Lab1');  ?>
+<?php define('TITEL', 'Login Lab1'); 
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +18,24 @@
         <li><a href="portfolio.php">Portfolio</a></li>
         <li><a href="contact.php">Contact</a></li>
     </ul>
-    <form action="login.php" method="POST">
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Email...">
-            <label>Lösenord:</label>
-            <input type="password" name="password" minlength="5"  placeholder="Lösenord...">
-            <button type="submit">Logga in!</button>
-    </form>
-        <span>
-        <p>Eller registrera dig <a href="signup.php">här.</a></p>
-    </span>
+    <?php
+            if(isset($_SESSION['email'])){
+                echo '<form action="logout.php" method="POST">
+                      <button type="submit">Logga ut!</button>
+                      </form>';
+            }
+            else {
+                echo '<form action="login.php" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Email...">
+                <label>Lösenord:</label>
+                <input type="password" name="password" minlength="5"  placeholder="Lösenord...">
+                <button type="submit">Logga in!</button>
+                </form>
+            <span>
+            <p>Eller registrera dig <a href="signup.php">här.</a></p>
+            </span>';
+            }
+            ?>
+
 </header>
