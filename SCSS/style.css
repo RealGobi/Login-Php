@@ -1,12 +1,7 @@
-body {
-  margin: 0;
-  background: #eee;
-}
-
-body header {
+header {
   display: -ms-grid;
   display: grid;
-  background: #ccc;
+  background: #ccffcc;
   -ms-grid-columns: 40% auto auto;
       grid-template-columns: 40% auto auto;
   -ms-grid-rows: 3rem 2rem;
@@ -14,7 +9,7 @@ body header {
       grid-template-areas: "nav . log" ". . signup";
 }
 
-body header ul {
+header ul {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: nav;
@@ -32,32 +27,32 @@ body header ul {
           align-items: center;
 }
 
-body header ul img {
+header ul img {
   margin: 20px 20px 0 0;
   width: 10%;
 }
 
-body header ul li {
+header ul li {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: rgba(238, 238, 238, 0.425);
+  background-color: rgba(238, 238, 238, 0.6);
   padding: 1.3rem;
   margin: 12px .2rem 0 0;
   border-radius: 10px;
 }
 
-body header ul li:hover {
+header ul li:hover {
   background-color: #eee;
   border-radius: 10px;
 }
 
-body header form {
+header form {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: log;
-  background: #ccc;
+  background: #ccffcc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,11 +62,11 @@ body header form {
   margin-top: 5px;
 }
 
-body header form button {
+header form button {
   margin: 5px;
 }
 
-body header form label {
+header form label {
   font-size: 1rem;
   padding: 5px;
   display: -webkit-box;
@@ -82,7 +77,7 @@ body header form label {
           align-items: center;
 }
 
-body header span {
+header span {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: signup;
@@ -94,31 +89,31 @@ body header span {
           justify-content: flex-end;
 }
 
-body header span p {
+header span p {
   padding: 5px;
   margin: 0;
 }
 
 @media screen and (max-width: 800px) {
-  body header {
+  header {
     -ms-grid-columns: 65% auto auto;
         grid-template-columns: 65% auto auto;
     -ms-grid-rows: 6em 2rem;
         grid-template-rows: 6em 2rem;
   }
-  body header ul li, body header ul img {
+  header ul li, header ul img {
     margin-top: 0;
   }
-  body header form {
+  header form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body header form label {
+  header form label {
     display: none;
   }
-  body header form input {
+  header form input {
     padding: 10px 10px 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -131,7 +126,7 @@ body header span p {
             align-items: center;
     margin-right: 10px;
   }
-  body header form button {
+  header form button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -143,13 +138,13 @@ body header span p {
             align-items: center;
     margin-right: 15px;
   }
-  body header span p {
+  header span p {
     padding: 10px 10px 0 0;
   }
 }
 
 @media screen and (max-width: 800px) and (max-width: 500px) {
-  body header {
+  header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -1,10 +1,7 @@
-body {
-    margin: 0;
-    background: #eee;
 
     header {
         display: grid;
-        background: #ccc;
+        background: #ccffcc;
         grid-template-columns: 40% auto auto;
         grid-template-rows: 3rem 2rem;
         grid-template-areas: 
@@ -27,7 +24,7 @@ body {
 
             li  {
                 flex-direction: row;
-                background-color:rgba(238, 238, 238, 0.425);
+                background-color:rgba(238, 238, 238, 0.6);
                 padding: 1.3rem;
                 margin:12px .2rem 0 0;
                 border-radius:  10px;
@@ -41,7 +38,7 @@ body {
         
         form {
             grid-area: log;
-            background: #ccc;
+            background: #ccffcc;
             display: flex;
             justify-content: flex-end;
             margin-top: 5px;
@@ -114,12 +111,6 @@ body {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                // ul, form, span {
-                //     display: flex;
-                //     justify-content: center;
-                //     align-items: center;
-                // }
             }
         }
     }
-}

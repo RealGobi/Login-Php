@@ -1,3 +1,4 @@
+<?php define('TITEL', 'Login Lab1');  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="SCSS/style.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="SCSS/main.css">
+    <title><?php echo TITEL ?></title>
 </head>
 <header>
     <ul>
         <img src="img/logo.png" alt="logo">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="portfolio.php">Portfolio</a></li>
+        <li><a href="contact.php">Contact</a></li>
     </ul>
-    <form action="registration.php" method="POST">
+    <form action="login.php" method="POST">
             <label>Email:</label>
             <input type="email" name="email" placeholder="Email...">
             <label>Password:</label>
@@ -22,9 +24,6 @@
             <button type="submit">Login!</button>
     </form>
         <span>
-        <p>Eller registrera dig <a href="#">här.</a></p>
+        <p>Eller registrera dig <a href="signup.php">här.</a></p>
     </span>
 </header>
-<body>
-</body>
-</html>
