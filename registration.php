@@ -19,15 +19,16 @@ try {
             echo("Oops! Lösenorden matchade inte, gö om gö rätt!");
             exit();
         } 
-        $passwordInput = $_POST["password"];
+
         $saltStart = "123abc";
         $saltEnd = "890zyw";
 
         $bcryptedPassword = password_hash($saltStart.$passwordInput.$saltEnd, PASSWORD_BCRYPT);
 
-        $jsonArray = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
+        $jsonArray[] = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
         print_r($jsonArray);
         $fp = fopen('json/registration.json', 'a');
+
 
         fwrite($fp, json_encode($jsonArray));
         fclose($fp);
