@@ -19,9 +19,9 @@
     <form action="login.php" method="POST">
             <label>Email:</label>
             <input type="email" name="email" placeholder="Email...">
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Password...">
-            <button type="submit">Login!</button>
+            <label>Lösenord:</label>
+            <input type="password" name="password" placeholder="Lösenord...">
+            <button type="submit">Logga in!</button>
     </form>
         <span>
         <p>Eller registrera dig <a href="signup.php">här.</a></p>

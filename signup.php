@@ -1,13 +1,15 @@
 <?php require 'header.php'; ?>
 <body>
-
-    <form action="registration.php" method="POST">
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Email...">
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Password...">
-            <button type="submit">Registrera dig!</button>
+    <main>
+        <h1>Regestrera dig!</h1>
+        
+        <form action="registration.php" method="POST">
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Email...">
+        <label>Lösenord:</label>
+        <input type="password" name="password" placeholder="Lösenord...">
+        <button type="submit">Registrera dig!</button>
     </form>
-
+    </main>
 </body>
 </html>

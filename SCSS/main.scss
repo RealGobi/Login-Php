@@ -1,4 +1,20 @@
 body {
     margin: 0;
     background: #ffffdd;
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            input {
+                margin: .2rem;
+            }
+        }
+    }
 }

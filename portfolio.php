@@ -1,6 +1,8 @@
 <?php require 'header.php'; ?>
 <body>
-<h1>Portfolio</h1>
+    <main>
+        <h1>Portfolio</h1>
+    </main>
 
 </body>
 </html>
