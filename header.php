@@ -35,16 +35,16 @@ session_start();
             <span>';
             if(isset($_GET['error'])){
                 if($_GET['error'] == 'emptyfeild'){
-                    echo '<p style="color:red; font-size:.9rem; padding-top:0px;">Fyll i alla fält.</p>';
+                    echo '<p style="color:red; font-size:.73rem; padding-top:0px;">Fyll i alla fält.</p>';
                 }
                 else if ($_GET['error'] == 'invalidEmail'){
-                    echo '<p style="color:red">Ej gilltlig email.</p>';  
+                    echo '<p style="color:red; font-size:.73rem; padding-top:0px;">Ej gilltlig email.</p>';  
                 }
                 else if ($_GET['error'] == 'invalidEmailOrPassword'){
-                    echo '<p style="color:red">Fel email eller lösenord.</p>';  
+                    echo '<p style="color:red; font-size:.73rem; padding-top:0px;">Fel email eller lösenord.</p>';  
                 }
             } 
-           echo '<p style="font-size:.9rem; padding-top:0px;">Eller registrera dig <a href="signup.php">här.</a></p>
+           echo '<p style="font-size:.85rem; padding-top:0px;">Eller registrera dig <a href="signup.php">här.</a></p>
             </span>';
             }
             
