@@ -25,11 +25,11 @@ session_start();
             $saltStart = "123abc";
             $saltEnd = "890zyw";
 
-            $data = file_get_contents('json/registration.json');
-            $userData = json_decode($data);
+            $getData = file_get_contents('json/registration.json');
+            $users = json_decode($getData);
 
-            foreach ($userData as $user) {
-              if(password_verify($saltStart . $passwordInput. $saltEnd, $user->password) && $emailInput == $user->email){
+            foreach ($users as $user) {
+              if($emailInput == $user->email && password_verify($saltStart . $passwordInput. $saltEnd, $user->password)){
                 $_SESSION["email"] = $emailInput;
                 header('Location:/Lab1/home.php?login=success');
                 exit();

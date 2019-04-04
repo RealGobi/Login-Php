@@ -25,13 +25,17 @@ try {
             
             $bcryptedPassword = password_hash($saltStart.$passwordInput.$saltEnd, PASSWORD_BCRYPT);
             
-            $jsonArray[] = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
-            print_r($jsonArray);
-            $fp = fopen('json/registration.json', 'a');
-            
-            
-            fwrite($fp, json_encode($jsonArray));
-            fclose($fp);
+
+            $openData = file_get_contents('json/registration.json');
+            $fileData = json_decode($openData,true);
+            $jsonArray = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
+            // $fp = fopen('json/registration.json', 'a');
+            // fwrite($fp, json_encode($jsonArray));
+            // fclose($fp);
+            $fileData[]= $jsonArray;
+            $putData = json_encode($fileData);
+            file_put_contents('json/registration.json', $putData);
+
             header('Location:/Lab1/signup.php?signup=success');
             exit();
         }
