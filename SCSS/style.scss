@@ -8,12 +8,12 @@
         "nav . log"
         ". . signup";
 
-        
         ul {
             img {
                 margin: 20px 20px 0 0;
                 width: 10%;
             }
+
             grid-area: nav;
             list-style: none;
             margin-top: 7px;
@@ -28,10 +28,7 @@
                 padding: 1.3rem;
                 margin:12px .2rem 0 0;
                 border-radius:  10px;
-                                    
-                                    
-                                    
-     
+                
             }
                 li:hover {
                     background-color: #eee;
@@ -63,8 +60,8 @@
             justify-content: flex-end;
 
             p {
-                padding: 5px;
-                margin: 0;
+                padding-right: 10px;
+                font-size: .9rem;
             }
         }
     }
@@ -98,13 +95,14 @@
                     align-items: center;
                     margin-right: 15px;
 
-
                 }
                 
             }
             span {
                 p {
-                    padding: 10px 10px 0 0;
+                    padding-right: 10px;
+                    font-size: .9rem;
+               
                 }
             }
         } 

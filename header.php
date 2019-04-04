@@ -32,10 +32,23 @@ session_start();
                 <input type="password" name="password" minlength="5"  placeholder="Lösenord...">
                 <button type="submit">Logga in!</button>
                 </form>
-            <span>
-            <p>Eller registrera dig <a href="signup.php">här.</a></p>
+            <span>';
+            if(isset($_GET['error'])){
+                if($_GET['error'] == 'emptyfeild'){
+                    echo '<p style="color:red; font-size:.9rem; padding-top:0px;">Fyll i alla fält.</p>';
+                }
+                else if ($_GET['error'] == 'invalidEmail'){
+                    echo '<p style="color:red">Ej gilltlig email.</p>';  
+                }
+                else if ($_GET['error'] == 'invalidEmailOrPassword'){
+                    echo '<p style="color:red">Fel email eller lösenord.</p>';  
+                }
+            } 
+           echo '<p style="font-size:.9rem; padding-top:0px;">Eller registrera dig <a href="signup.php">här.</a></p>
             </span>';
             }
+            
             ?>
 
 </header>
+

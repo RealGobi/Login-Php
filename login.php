@@ -9,7 +9,7 @@ session_start();
         $passwordInput = $_POST['password'];
 
         if (empty($emailInput) || empty($passwordInput)) {
-            header('Location:/Lab1/home.php?error=emptyfeild=mail='.$emailInput);
+            header('Location:/Lab1/home.php?error=emptyfeild&mail='.$emailInput);
             exit();
         }
         else if (!filter_var($emailInput, FILTER_VALIDATE_EMAIL)){
@@ -27,11 +27,10 @@ session_start();
 
             $getData = file_get_contents('json/registration.json');
             $users = json_decode($getData);
-
             foreach ($users as $user) {
-              if($emailInput == $user->email && password_verify($saltStart . $passwordInput. $saltEnd, $user->password)){
-                $_SESSION["email"] = $emailInput;
-                header('Location:/Lab1/home.php?login=success');
+                if($emailInput == $user->email && password_verify($saltStart . $passwordInput. $saltEnd, $user->password)){
+                    $_SESSION["email"] = $emailInput;
+                    header('Location:/Lab1/home.php?login=success');
                 exit();
               } 
               else {
