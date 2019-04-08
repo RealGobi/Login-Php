@@ -28,6 +28,12 @@ try {
 
             $openData = file_get_contents('json/registration.json');
             $fileData = json_decode($openData,true);
+
+            foreach($fileData as $user)
+            if ($emailInput !== $user->email){
+                header('Location:/Lab1/signup.php?error=mailinuse');
+                exit();
+            }
             $jsonArray = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
             $fileData[]= $jsonArray;
             

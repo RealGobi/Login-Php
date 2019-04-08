@@ -28,17 +28,14 @@ session_start();
             $getData = file_get_contents('json/registration.json');
             $users = json_decode($getData);
             foreach ($users as $user) {
-               
                 if($emailInput == $user->email && password_verify($saltStart . $passwordInput. $saltEnd, $user->password)){
                     $_SESSION["email"] = $emailInput;
                     header('Location:/Lab1/home.php?login=success');
-                exit();
-                } 
-                else {
-                    header('Location:/Lab1/home.php?error=invalidEmailOrPassword');
                     exit();
                 }
             }
+            header('Location:/Lab1/home.php?error=invalidEmailOrPassword');
+            exit();
         }
         inlogg();
      }
