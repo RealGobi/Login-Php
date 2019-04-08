@@ -8,7 +8,7 @@ try {
         #öppnar json 
         $openData = file_get_contents('json/registration.json');
         $fileData = json_decode($openData);
-
+        #kollar så att emailen inte redan används
         foreach($fileData as $user){
             $emails[] = $user->email;
         }
