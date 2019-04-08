@@ -19,6 +19,7 @@ session_start();
         <li><a href="contact.php">Contact</a></li>
     </ul>
     <?php
+    #lite olika info beroende på om $_SESSION är fylld eller ej
             if(isset($_SESSION['email'])){
                 echo '<form action="logout.php" method="POST">
                       <button type="submit">Logga ut!</button>

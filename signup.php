@@ -4,6 +4,7 @@ require 'header.php'; ?>
     <main>
         <h1>Regestrera dig!</h1>
         <?php
+        #feedback till användarna, först vid fel och längst ner vid success
         if(isset($_GET['error'])){
             if($_GET['error'] == 'emptyfeildReg'){
                 echo '<p style="color:red">Fyll i alla fält.</p>';
@@ -20,11 +21,8 @@ require 'header.php'; ?>
         }
         else if(isset($_GET['signup']) == 'success'){
             echo '<p style="color:green">Registrering klar, testa logga in uppe i högra hörnet.</p>';
-        } 
+        }
         
-        
-        
-
         ?>
         <form action="registration.php" method="POST">
         <label>Email:</label>

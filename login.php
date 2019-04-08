@@ -17,7 +17,7 @@ session_start();
             exit();
         }
 
-        
+        #kollar så att inloggen stämmer överens med json
         function inlogg(){
             $emailInput = $_POST['email'];
             $passwordInput = $_POST['password'];
