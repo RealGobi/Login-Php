@@ -4,6 +4,16 @@ try {
         $emailInput = $_POST['email'];
         $passwordInput = $_POST['password'];
         $passwordInput2 = $_POST['password2'];
+
+        #öppnar json 
+        $openData = file_get_contents('json/registration.json');
+        $fileData = json_decode($openData);
+
+        foreach($fileData as $user){
+            $emails[] = $user->email;
+        }
+        $emailInUse = json_encode($emails);
+
         #kollar så allt är rätt ifyllt
         if (empty($emailInput) || empty($passwordInput) || empty($passwordInput2)) {
             header('Location:/Lab1/signup.php?error=emptyfeildReg');
@@ -18,15 +28,16 @@ try {
             header('Location:/Lab1/signup.php?error=passwordcheckfailed');
             exit();
         } 
+        else if (strpos($emailInUse, $emailInput)!== false){
+            header('Location:/Lab1/signup.php?error=emailInUse');
+            exit();
+        } 
+        
         else {
             #salt och hash av lösen
             $saltStart = "123abc";
             $saltEnd = "890zyw";
             $bcryptedPassword = password_hash($saltStart.$passwordInput.$saltEnd, PASSWORD_BCRYPT);
-            
-            #öppnar json 
-            $openData = file_get_contents('json/registration.json');
-            $fileData = json_decode($openData,true);
 
             #sparar i json
             $jsonArray = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
