@@ -15,14 +15,11 @@ require 'header.php'; ?>
             else if ($_GET['error'] == 'passwordcheckfailed'){
                 echo '<p style="color:red">Oops! Lösenorden matchade inte, gö om gö rätt!.</p>';   
             }
-            else if ($_GET['error'] == 'mailinuse'){
-                echo '<p style="color:red;">Email-adressen finns redan i arkivet.</p>';  
-            }
         }
         else if(isset($_GET['signup']) == 'success'){
             echo '<p style="color:green">Registrering klar, testa logga in uppe i högra hörnet.</p>';
         }
-        
+
         ?>
         <form action="registration.php" method="POST">
         <label>Email:</label>

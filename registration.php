@@ -28,19 +28,14 @@ try {
             $openData = file_get_contents('json/registration.json');
             $fileData = json_decode($openData,true);
 
-            #kollar så email inte är använd
-            foreach($fileData as $user)
-            if ($emailInput !== $user->email){
-                header('Location:/Lab1/signup.php?error=mailinuse');
-                exit();
-            }
             #sparar i json
             $jsonArray = array('email'=>$emailInput, 'password'=> $bcryptedPassword);
             $fileData[]= $jsonArray;
-            $putData = json_encode($fileData);     
+            $putData = json_encode($fileData);       
             file_put_contents('json/registration.json', $putData);
             header('Location:/Lab1/signup.php?signup=success');
             exit();
+            
         }
 
     }
